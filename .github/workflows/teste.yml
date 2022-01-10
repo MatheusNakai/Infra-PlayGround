@@ -37,9 +37,10 @@ jobs:
         name: Run Container
         run : |
           docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_TOKEN }}|
-          docker run --name teste -d -p 8000:8000 matheusnakai/python-docker |
+          docker run --name teste -d -p 8000:8000 matheusnakai/python-docker
       -
         name: Test Container
-        run:  docker exec -it teste bash
+        run:  |
+        docker exec -it teste bash
 
 
