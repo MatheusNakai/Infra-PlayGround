@@ -17,14 +17,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag python-docker:$(date +%s)
 
-  conteiner:
-
-    runs-on: ubuntu-latest
-    environment: teste
-    needs: build
-
-    steps:
-
-    - uses: actions/checkout@v2
     - name : Create a container
       run: docker run --name teste -p 8000:8000 python-docker
