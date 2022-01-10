@@ -32,4 +32,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-docker:latest
+      -
+        name: Test
+        uses: docker/test-action@v1
+        run : |
+          docker run --name teste -p 8000:8000 python-docker
