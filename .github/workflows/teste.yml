@@ -37,8 +37,12 @@ jobs:
         name: Run Container
         run : |
            docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_TOKEN }}|
-           docker run --name teste -d -p 8000:8000 matheusnakai/python-docker |
-           docker exec -it teste bash |
-           curl http://localhost:8000/ |
+        run: |
+           docker run --name teste -d -p 8000:8000 matheusnakai/python-docker 
+        run: |
+           docker exec -it teste bash 
+        run: |
+           curl http://localhost:8000/
+        run: |
            curl http://localhost:8000/erro
 
