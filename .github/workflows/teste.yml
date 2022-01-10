@@ -40,6 +40,9 @@ jobs:
           docker run --name teste -d -p 8000:8000 matheusnakai/python-docker
       -
         name: Test Container
-        run: docker exec teste bash
+        run: docker exec teste bash|
+        curl http://localhost:8000/|
+        curl http://localhost:8000/erro
+
 
 
