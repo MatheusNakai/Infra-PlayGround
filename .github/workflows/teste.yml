@@ -39,4 +39,3 @@ jobs:
            docker login : ${{ secrets.DOCKER_HUB_USERNAME }} |
            ${{ secrets.DOCKER_HUB_TOKEN }} |
            docker run --name teste -p 8000:8000 matheusnakai/python-docker |
-           curl -s -o /dev/null -w "%{http_code}" localhost:8000
