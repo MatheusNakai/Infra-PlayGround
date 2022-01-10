@@ -36,5 +36,7 @@ jobs:
       - 
         name: Run Container
         run : |
+           docker login : ${{ secrets.DOCKER_HUB_USERNAME }} |
+           ${{ secrets.DOCKER_HUB_TOKEN }} |
            docker run --name teste -p 8000:8000 python-docker |
            curl -s -o /dev/null -w "%{http_code}" localhost:8000
