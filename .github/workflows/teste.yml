@@ -40,6 +40,6 @@ jobs:
           docker run --name teste -d -p 8000:8000 matheusnakai/python-docker
       -
         name: Test Container
-        run: sudo docker exec teste bash -c "curl http://0.0.0.0:8000"
+        run: sudo docker exec teste bash -c "uvicorn server:app --reload"
 
 
