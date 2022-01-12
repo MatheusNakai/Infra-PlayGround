@@ -8,4 +8,4 @@ RUN pip3 install -r requirements.txt
 RUN pip3 install uvicorn
 EXPOSE 8000
 COPY . .
-CMD ["py -m venv venv","|","venv\Scripts\activate","|","uvicorn server:app --reload --host=0.0.0.0"]
+CMD ["py", "-m", "venv venv""]
