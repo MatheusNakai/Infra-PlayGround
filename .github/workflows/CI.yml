@@ -20,11 +20,7 @@ jobs:
       run: docker build . --file Dockerfile --tag python-docker:$(date +%s)
 
     - name: Run Container
-      uses: mosteo-actions/docker-run@v1
-      with:
-        image: python-docker:$(date +%s)
-        host-dir: ${{ github.workspace }}
-        guest-dir: ${{ github.workspace }}
-        
+      run: docker run -p 8000:8000 python-docker:$(date +%s)
+
 
   
