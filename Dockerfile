@@ -7,6 +7,7 @@ COPY ./ /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN pip3 install -r requirements.txt
+RUN sudo apt-get install python3-venv
 RUN pip3 install uvicorn
 EXPOSE 8000
 CMD ["uvicorn", "server:app", "--reload"]
