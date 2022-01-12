@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
+
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t python-docker .
@@ -23,7 +23,7 @@ jobs:
       run: docker run --name teste -p 8000:8000 -d python-docker
 
     - name: Get container running
-      run: docker ps
+      run: pwd
     
     - name: Get container logs
       run: docker logs teste
