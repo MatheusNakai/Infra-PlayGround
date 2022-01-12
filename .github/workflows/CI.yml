@@ -21,7 +21,7 @@ jobs:
       run: docker build -t python-docker .
 
     - name: Run Container
-      run: docker run --name teste -p 8080:8080 -d python-docker
+      run: docker run --name teste -p 8000:8000 -d python-docker
 
     - name: Get container running
       run: docker ps
@@ -35,7 +35,7 @@ jobs:
       uses: lakuapik/gh-actions-http-status@v1
       with:
         # List website urls in JSON 
-        sites: '["localhost:8080/", "localhost:8080/erro"]'
+        sites: '["0.0.0.0:8000/", "0.0.0.0:8000/erro"]'
         # List expected HTTP status codes in JSON
         expected: '[200, 400]'
   
