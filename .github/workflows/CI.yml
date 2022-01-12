@@ -25,5 +25,7 @@ jobs:
     - name: Get container running
       run: docker ps
     
+    - name: Get container logs
+      run: docker logs teste
 
   
