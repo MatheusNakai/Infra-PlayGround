@@ -16,9 +16,9 @@ jobs:
 
     steps:
     - name: venv
-      run: python3 -m venv /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv
+      run: python3 -m venv /venv
     - name: activate venv
-      run: source /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv/bin/activate
+      run: /venv/bin/activate
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t python-docker .
