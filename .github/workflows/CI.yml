@@ -16,9 +16,9 @@ jobs:
 
     steps:
     - name: venv
-      run: sudo python3 -m venv /venv
+      run: sudo python3 -m venv source/venv
     - name: activate venv
-      run: sudo /venv/bin/activate
+      run: source /venv/bin/activate
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t python-docker .
