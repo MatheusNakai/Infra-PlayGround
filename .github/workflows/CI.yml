@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: venv
-      run: sudo python -m venv source/venv
+      run: sudo python -m venv /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv
     - name: Build the Docker image
       run: docker build -t python-docker .
 
