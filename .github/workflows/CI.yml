@@ -18,7 +18,7 @@ jobs:
     - name: venv
       run: sudo python3 -m venv source/venv
     - name: activate venv
-      run: source /venv/bin/activate.fish
+      run: source /venv/bin/activate.csh
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t python-docker .
