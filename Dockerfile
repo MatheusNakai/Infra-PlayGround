@@ -9,4 +9,4 @@ COPY requirements.txt /app
 RUN pip3 install -r requirements.txt
 RUN pip3 install uvicorn
 EXPOSE 8000
-CMD ["/home/runner/work/Infra-PlayGround/Infra-PlayGround/venv/bin/activate","|","uvicorn", "server:app", "--reload"]
+CMD ["venv/bin/activate","|","uvicorn", "server:app", "--reload"]
