@@ -18,3 +18,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag python-docker:$(date +%s)
+
+    - name: Run Container
+      uses: mosteo-actions/docker-run@v1
+      with:
+        image: python-docker:$(date +%s)
+        host-dir: ${{ github.workspace }}
+        guest-dir: ${{ github.workspace }}
+        
+
+  
