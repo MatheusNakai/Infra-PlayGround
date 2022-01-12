@@ -11,18 +11,18 @@ on:
 jobs:
   
   venv:
-  runs-on: ubuntu-latest
-  steps:
-  - name: Create venv
-    run: python3 -m venv venv
-  - name: Activate venv
-    run: venv/bin/activate
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create venv
+      run: python3 -m venv venv
+    - name: Activate venv
+      run: venv/bin/activate
 
   build:
 
     runs-on: ubuntu-latest
     needs: [ venv ]
-    
+
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
