@@ -17,10 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag python-docker:$(date +%s)
+      run: docker build -t python-docker .
 
     - name: Run Container
-      run: docker run -p 8000:8000 python-docker:$(date +%s)
+      run: docker run -p 8000:8000 -d python-docker
+      
 
 
   
