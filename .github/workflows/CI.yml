@@ -16,7 +16,7 @@ jobs:
     - name: Create venv
       run: python3 -m venv venv
     - name: Activate venv
-      run: venv/bin/activate
+      run: venv/Scripts/activate
 
   build:
 
