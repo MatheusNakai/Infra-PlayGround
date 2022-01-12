@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: venv
+      run: sudo python -m venv /venv
     - name: Build the Docker image
       run: docker build -t python-docker .
 
