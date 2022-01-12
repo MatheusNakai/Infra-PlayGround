@@ -18,7 +18,7 @@ jobs:
     - name: venv
       run: sudo python -m venv /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv
     - name: activate
-      run: sudo /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv/bin/activate
+      run: /home/runner/work/Infra-PlayGround/Infra-PlayGround/venv/bin/activate.ps1
     - name: Build the Docker image
       run: docker build -t python-docker .
 
