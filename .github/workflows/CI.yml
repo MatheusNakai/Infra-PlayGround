@@ -10,20 +10,10 @@ on:
 
 jobs:
 
-  venv:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: create venv
-      run: |
-        python3 -m venv venv
-        source venv/bin/activate
-
 
   build:
 
     runs-on: ubuntu-latest
-    needs: [ venv ]
 
     steps:
     - uses: actions/checkout@v2
