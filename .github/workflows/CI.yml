@@ -16,7 +16,7 @@ jobs:
     - name: Build
       run: docker build -t test .
     - name: Run
-      run: docker run --name test -d -p 8000:8000 test
+      run: docker run --name test -d -p 8080:8080 test
     - name: Get containers running
       run: docker ps
     - name: Get logs

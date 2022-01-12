@@ -6,6 +6,6 @@ WORKDIR /
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 RUN pip3 install uvicorn
-EXPOSE 8000
+EXPOSE 8080
 COPY . .
 CMD [ "uvicorn", "server:app", "--reload" ]
