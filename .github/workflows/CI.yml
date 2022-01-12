@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: venv
-      run: python3 -m venv /venv
+      run: sudo python3 -m venv /venv
     - name: activate venv
       run: /venv/bin/activate
     - uses: actions/checkout@v2
