@@ -21,7 +21,9 @@ jobs:
 
     - name: Run Container
       run: docker run -p 8000:8000 -d python-docker
-      
 
+    - name: Get container running
+      run: docker ps
+    
 
   
