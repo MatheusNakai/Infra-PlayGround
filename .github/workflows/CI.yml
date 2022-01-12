@@ -28,13 +28,4 @@ jobs:
     - name: Get container logs
       run: docker logs teste
 
-    - name: HTTP Status
-      # You may pin to the exact commit or the version.
-      # uses: lakuapik/gh-actions-http-status@705c34b4307b8a0354a431b75bb5910b6562dd20
-      uses: lakuapik/gh-actions-http-status@v1
-      with:
-        # List website urls in JSON 
-        sites: '["0.0.0.0:8000/", "0.0.0.0:8000/erro"]'
-        # List expected HTTP status codes in JSON
-        expected: '[200, 400]'
   
