@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine
+FROM python:3.9.6-alpine
 
-WORKDIR /
+WORKDIR /app
 RUN apk add py3-pip
 RUN apk add wget
 RUN apk add curl
