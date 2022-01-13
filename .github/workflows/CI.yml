@@ -30,5 +30,8 @@ jobs:
     - name: Get container logs
       run: docker logs teste
       
+    - name: Sleep
+      run: sleep 5s
+      
     - name: test
       run: curl http://localhost:8000
