@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 RUN pip3 install uvicorn
 EXPOSE 8000
 COPY . .
-CMD ["./venv/bin/activate","&&", "uvicorn", "server:app", "--reload" ] 
+CMD ["sudo","./venv/bin/activate","&&", "uvicorn", "server:app", "--reload" ] 
