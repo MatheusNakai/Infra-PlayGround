@@ -33,8 +33,8 @@ jobs:
     - name: Sleep
       run: sleep 5s
       
-    - name: Check http status code of production site
+    - name: Check HTTP status of production site
       uses: lakuapik/gh-actions-http-status@v1
       with:
-        sites: '["http://localhost:8000", "htpp://localhost:8000/erro"]'
+        sites: '["localhost:8000", "localhost:8000/erro"]'
         expected: '[200, 400]'
