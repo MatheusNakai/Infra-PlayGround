@@ -35,7 +35,7 @@ jobs:
       
     - name: Check HTTP status of production site
       id: code
-      run: echo "::set-output name=status::$(curl -o /dev/null -s -w "%{http_code}\n" localhost:8080)"
+      run: echo "::set-output name=status::$(curl -o /dev/null -s -w "%{http_code}\n" localhost:8000)"
     - uses: nick-invision/assert-action@v1
       with:
         expected: 200
