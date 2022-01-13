@@ -34,5 +34,5 @@ jobs:
       run: sleep 5s
       
     - name: Check HTTP status of production site
-      run:  curl -Is http:/localhost:8000/ | head -n 1
+      run:  curl --include http:/localhost:8000/ | head -n 1
       
