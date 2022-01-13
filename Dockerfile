@@ -9,4 +9,4 @@ RUN pip3 install -r requirements.txt
 RUN pip3 install uvicorn
 EXPOSE 8000
 COPY . .
-CMD ["uvicorn", "server:app", "--reload", "--host", "0.0.0.0:8000" ] 
+CMD ["uvicorn", "server:app", "--reload", "--host", "0.0.0.0" ] 
