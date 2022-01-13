@@ -22,7 +22,7 @@ jobs:
       run: docker build -t python-docker .
 
     - name: Run Container
-      run: docker run --name teste -p 8000:8000 -d python-docker
+      run: docker run --name teste -p 8000:8000 python-docker
 
     - name: Get container running
       run: docker ps
