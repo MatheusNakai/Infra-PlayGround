@@ -36,5 +36,5 @@ jobs:
     - name: Check http status code of production site
       uses: lakuapik/gh-actions-http-status@v1
       with:
-        sites: '["localhost:8000", "localhost:8000/erro"]'
+        sites: '["http://localhost:8000", "htpp://localhost:8000/erro"]'
         expected: '[200, 400]'
