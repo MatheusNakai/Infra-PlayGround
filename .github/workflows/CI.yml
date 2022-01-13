@@ -35,7 +35,7 @@ jobs:
       
     - name: Check HTTP status of production site
       id: code
-      run: echo "::set-output name=status::$(curl --include http:/localhost:8000/ | head -n 1)"
+      run: curl --include http:/localhost:8000/ | head -n 1
     - uses: nick-invision/assert-action@v1
       with:
         expected: 200
