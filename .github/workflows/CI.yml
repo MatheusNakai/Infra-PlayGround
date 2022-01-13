@@ -34,5 +34,9 @@ jobs:
       run: sleep 5s
       
     - name: Check HTTP status of production site
-      run:  curl --include http:/localhost:8000/ | head -n 1
-      
+      id: code
+      run: echo "::set-output name=status::$(curl -o /dev/null -s -w "%{http_code}\n" localhost:8080)"
+    - uses: nick-invision/assert-action@v1
+      with:
+        expected: 200
+        actual:  ${{ steps.code.outputs.status }}
