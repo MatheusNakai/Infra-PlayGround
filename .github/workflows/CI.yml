@@ -33,9 +33,11 @@ jobs:
     - name: Sleep
       run: sleep 5s
       
-    - name: Check the site
-      id: hello
-      uses: srt32/uptime@master
+    - name: Check HTTP status of production site
+      uses: lakuapik/gh-actions-http-status@v1
       with:
-        url-to-hit: "https://localhost:8000"
-        expected-statuses: "200,301"
+        # List website urls in JSON 
+        sites: '["localhost:8000/", "localhost:8000/erro"]'
+        # List expected HTTP status codes in JSON
+        expected: '[200, 400]'
+      
