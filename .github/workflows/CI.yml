@@ -33,6 +33,9 @@ jobs:
     - name: Sleep
       run: sleep 5s
       
-    - name: Check HTTP status of production site
-      run: curl localhost:8000
-      
+    - name: Check the site
+      id: hello
+      uses: srt32/uptime@master
+      with:
+        url-to-hit: "https://localhost:8000"
+        expected-statuses: "200,301"
