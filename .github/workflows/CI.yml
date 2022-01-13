@@ -25,7 +25,7 @@ jobs:
       run: docker run --name teste -d -p 8000:8000 python-docker
 
     - name: Get container running
-      run: cd venv && cd bin && ls
+      run: ./venv/bin/activate
     
     - name: Get container logs
       run: docker logs teste
