@@ -31,4 +31,4 @@ jobs:
       run: docker logs teste
       
     - name: test
-      run: docker exec curl http://localhost:8000
+      run: docker exec teste curl http://localhost:8000
